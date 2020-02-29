@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Data</title>
+
+  <!-- Load Bulma from CDN (consider saving it to repository instead) -->
+  <!-- https://bulma.io/ -->
+  <link rel="stylesheet" href=https://jenil.github.io/bulmaswatch/pulse/bulmaswatch.min.css>
+
+  <!-- Load Font Awesome 5 (free) icons -->
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+
+<body>
+
+  <!-- Page header -->
+  <!-- https://bulma.io/documentation/layout/hero/ -->
+  <section class="hero is-primary is-bold">
+    <div class="hero-body">
+      <div class="container">
+        <!-- TODO: Change title -->
+        <h1 class="title">Data</h1>
+        <!-- TODO: Change subtitle -->
+        <h2 class="subtitle">Opportunity Insight Mobility Report Card</h2>
+      </div>
+    </div>
+  </section>
+  <!-- End page header -->
+
+  <!-- Page navigation -->
+  <!-- https://bulma.io/documentation/components/navbar/ -->
+  <nav class="navbar is-light" role="navigation" aria-label="main navigation">
+    <div class="container">
+      <div class="navbar-brand">
+
+        <a class="navbar-item" href="index.html">
+          <span class="icon"><i class="fas fa-home"></i></span>
+          <span>Home</span>
+        </a>
+
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="main-menu">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="main-menu" class="navbar-menu has-text-weight-medium">
+        <!-- Left navbar items -->
+        <div class="navbar-start">
+          <a class="navbar-item is-active" href="data.html" title="Data">
+            <span class="icon"><i class="fas fa-table"></i></span>
+            <span>Data</span>
+          </a>
+
+          <a class="navbar-item" href="parcoord.html">
+            <span class="icon"><i class="fas fa-chart-area"></i></span>
+            <span>Parallel Coordinate</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- End page navigation -->
+
+<section class="section">
+  <div class="container">
+    <!-- Begin page content -->
+    <div class="content">
+
+      <h2 id="data">Data</h2>
+
+      <p>The data set was taken from <a href=https://opportunityinsights.org/paper/mobilityreportcards/> Opportunity Insights Mobility Report Cards table 2</a>  which shows the Baseline Cross-Sectional Estimates of Child and Parent Income Distributions by College.</p>
+      <blockquote>
+        <cite>Table 2: Baseline Cross-Sectional Estimates by College</br>
+          This table reports our baseline estimates of parents’ and children’s income distributions by college. We
+          calculate college-level values as means over students in the 1980, 1981 and 1982 birth cohorts. When
+          data for a college from any of these cohorts are incomplete, we use data from 1983 and 1984 cohorts to
+          obtain an estimate. See the codebook for Online Data Table 1 for definitions of income variables, college
+          attendance, and other details.
+          In some cases, multiple colleges share a single identifier in the tax records (e.g., the campuses of the
+          University of Massachusetts or University of Illinois systems). In these cases (denoted by multi = 1 in the
+          dataset), we report averages over all students attending the relevant group of colleges. For these groups
+          of colleges, we assign locations based on the location of the largest school/campus with the group of
+          colleges.
+        </cite>
+      </blockquote>
+
+      <h3>License</h3>
+
+      <blockquote>
+        <p>
+          This data is made available under opportunityinsights.org
+        </p>
+        <cite>As part of our research studies, we put out publicly available datasets that can be used by other researchers and practitioners to support their own work. These datasets allow you to analyze social mobility and a variety of other
+          outcomes from life expectancy to patent rates by neighborhood, college, parental income level, and racial background. You can search for datasets by geographic level (e.g., Census tracts), by topic (e.g., education), or by the title of
+          the paper. Need technical assistance with these data? Contact us at <a href="mailto:info@opportunityinsights.org">info@opportunityinsights.org</a></cite>
+        </blockquote>
+
+        <h3>Data Dictionary</h3>
+        <div class= "table-container">
+          <table class="table is-bordered is-hoverable is-narrow " width= "500">
+            <thead><tr><th title="Field #1">Variable</th>
+              <th title="Field #2">Description</th>
+            </tr></thead>
+            <tbody><tr>
+              <td>super_opeid</td>
+              <td>InstitutionOPEID/ClusterIDwhencombiningmultiple<br/>OPEIDs:<br/>-99 = late goers (attended college between 23-28)<br/>-9 = Never attended college (up to and including<br/>year 2013)<br/>-1 = attending a college with insufficient data (less<br/>than 100 students on average or incomplete data)<br/>&gt;0 = specific colleges</td>
+            </tr>
+            <tr>
+              <td>name</td>
+              <td>Name of college (or college group)</td>
+            </tr>
+            <tr>
+              <td>type</td>
+              <td>Type :<br/>1 = public<br/>2 = private non-profit<br/>3 = for-profit</td>
+            </tr>
+            <tr class="is-selected">
+              <td>tier</td>
+              <td>Selectivityandtypecombination(seeTable6formore<br/>detailed descriptions of these groups):<br/>1 = Ivy Plus<br/>2 = Other elite schools (public and private)<br/>3 = Highly selective public<br/>4 = Highly selective private<br/>5 = Selective public<br/>6 = Selective private<br/>7 = Nonselective 4-year public<br/>8 = Nonselective 4-year private not-for-profit<br/>9 = Two-year (public and private not-for-profit)<br/>10 = Four-year for-profit<br/>11 = Two-year for-profit<br/>12 = Less than two year schools of any type<br/>13 = Attending college with insufficient data<br/>14 = Not in college between the ages of 19-22</td>
+            </tr>
+            <tr>
+              <td>14 = Not in college between the ages of 19-2</td>
+              <td> </td>
+            </tr>
+            <tr>
+              <td>iclevel</td>
+              <td>Four-year or two-year college<br/>1 = Four-year<br/>2 = Two-year<br/>3 = Less than Two-year</td>
+            </tr>
+            <tr>
+              <td>region</td>
+              <td>Census region:<br/>1 = Northeast<br/>2 = Midwest<br/>3 = South<br/>4 = West</td>
+            </tr>
+            <tr class="is-selected">
+              <td>state</td>
+              <td>State</td>
+            </tr>
+            <tr>
+              <td>cz</td>
+              <td>Commuting zone ID</td>
+            </tr>
+            <tr>
+              <td>czname</td>
+              <td>Commuting zone name</td>
+            </tr>
+            <tr>
+              <td>cfips</td>
+              <td>Combined state and county fips code</td>
+            </tr>
+            <tr>
+              <td>county</td>
+              <td>County</td>
+            </tr>
+            <tr>
+              <td>multi</td>
+              <td>Indicator that equals 1 if multiple colleges (IPEDS Unit IDs)<br/>are grouped in this Super OPEID</td>
+            </tr>
+            <tr>
+              <td>count</td>
+              <td>Average number of kids per cohort</td>
+            </tr>
+            <tr>
+              <td>female</td>
+              <td>Fraction female among kids</td>
+            </tr>
+            <tr>
+              <td>k_married</td>
+              <td>Fraction of kids married in 2014</td>
+            </tr>
+            <tr class="is-selected">
+              <td>mr_kq5_pq1</td>
+              <td>Mobility rate (joint probability of parents in bottom quintile<br/>and child in top quintile of the income distribution)</td>
+            </tr>
+            <tr>
+              <td>mr_ktop1_pq1</td>
+              <td>Upper-tailmobilityrate(jointprobabilityofparentsin<br/>bottomquintileandchildintop1%oftheincome<br/>distribution)</td>
+            </tr>
+            <tr>
+              <td>par_mean</td>
+              <td>Mean parental income</td>
+            </tr>
+            <tr>
+              <td>par_median</td>
+              <td>Medianparenthouseholdincome(roundedtonearest<br/>$100)</td>
+            </tr>
+            <tr>
+              <td>par_rank</td>
+              <td>Mean parental income rank</td>
+            </tr>
+            <tr>
+              <td>par_q[PARQUINT]</td>
+              <td>Fraction of parents in an income quintile [PARQUINT]. 1 is<br/>the bottom quintile and 5 is the top.</td>
+            </tr>
+            <tr>
+              <td>par_top[PCTILE]pc</td>
+              <td>Fractionofparentsinthetoppercentile[PCTILE].For<br/>instance, par_toppt1pc refers to parents in the top 0.1% of<br/>the income distribution.</td>
+            </tr>
+            <tr>
+              <td>k_rank</td>
+              <td>Mean kid earnings rank</td>
+            </tr>
+            <tr>
+              <td>k_mean</td>
+              <td>Mean kid earnings</td>
+            </tr>
+            <tr class="is-selected">
+              <td>k_median</td>
+              <td>Median child individual earnings in 2014 (rounded to the<br/>nearest $100)</td>
+            </tr>
+            <tr>
+              <td>k_median_nozero</td>
+              <td>Median child individual earnings among positive earners in<br/>2014 (rounded to the nearest $100)</td>
+            </tr>
+            <tr>
+              <td>k_0inc</td>
+              <td>Fraction of kids with zero labor earnings</td>
+            </tr>
+            <tr>
+              <td>k_q[KIDQUINT]</td>
+              <td>Fraction of kids in an income quintile [KIDQUINT]. 1 is the<br/>bottom quintile and 5 is the top.</td>
+            </tr>
+            <tr>
+              <td>k_rank_cond_parq[PARQUINT]</td>
+              <td>Mean kid earnings rank conditional on parent in quintile<br/>[PARQUINT]</td>
+            </tr>
+            <tr>
+              <td>kq[KIDQUINT]_cond_parq[PARQUINT]</td>
+              <td>Probabilityofkidinquintile[KIDQUINT]conditionalon<br/>parent in quintile [PARQUINT]</td>
+            </tr>
+            <tr>
+              <td>ktop1pc_cond_parq[PARQUINT]</td>
+              <td>Probability of kid in top 1% conditional on parent in quintile<br/>[PARQUINT]</td>
+            </tr>
+            <tr>
+              <td>k_married_cond_parq[PARQUINT]</td>
+              <td>Fraction of kids married conditional on parent in quintile<br/>[PARQUINT]</td>
+            </tr>
+            <tr>
+              <td>shareimputed</td>
+              <td>Shareofcount-weighteddatathatwasimputedusing<br/>information from the 1983-84 cohorts</td>
+            </tr>
+            <tr>
+              <td>imputed</td>
+              <td>Indicator if any data for that super_opeid was imputed</td>
+            </tr>
+          </tbody></table></div>
+
+          <h3 id="wrangling">Wrangling</h3>
+
+          <p>The data was first downloaded from the Opportunity Insights website as a csv file. Some of the data was filtered beforehand so as to manage it in the Raw Graph website.
+          The filtered data was from the "state" variable and filtered down to "NY", "CA" and "TX".</br>
+          The other variables used were "kq5_cond_parq1", "tier" and "k_median".</br>
+          All variables used have been highlighted in the above table.</p>
+
+
+              </div>
+              <!-- End page content -->
+            </div>
+          </section>
+
+          <!-- Page footer -->
+          <!-- https://bulma.io/documentation/layout/footer/ -->
+          <footer class="footer">
+            <div class="content has-text-centered is-size-7">
+              <p>
+                <a href="#top">
+                  <span class="fas fa-arrow-up"></span>
+                  <span class="has-text-weight-medium">Back to Top</span>
+                </a>
+              </p>
+
+              <p>
+                <!-- TODO: Change to link to your Github repository -->
+                <a href="https://github.com/usf-cs360-spring2020/homework2-etbascur" class="button is-small" style="padding-left: 1em; padding-right: 1em;">
+                  <i class="fab fa-github-alt"></i>&nbsp;<strong>Github</strong>
+                </a>
+
+                <a href="https://fontawesome.com/" class="button is-small" style="padding-left: 1em; padding-right: 1em;">
+                  <i class="fab fa-font-awesome"></i>&nbsp;<strong>FontAwesome</strong>
+                </a>
+
+                <a href="https://bulma.io" class="button is-small">
+                  <img src="https://bulma.io/images/made-with-bulma--semiblack.png" alt="Made with Bulma" width="128" height="24">
+                </a>
+              </p>
+            </div>
+          </footer>
+          <!-- End page footer -->
+
+          <!-- Mobile menu responsiveness -->
+          <!-- https://bulma.io/documentation/components/navbar/ -->
+          <script>
+          document.addEventListener('DOMContentLoaded', () => {
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+            if ($navbarBurgers.length > 0) {
+              $navbarBurgers.forEach( el => {
+                el.addEventListener('click', () => {
+                  const target = el.dataset.target;
+                  const $target = document.getElementById(target);
+                  el.classList.toggle('is-active');
+                  $target.classList.toggle('is-active');
+                });
+              });
+            }
+          });
+          </script>
+          <!-- End mobile menu responsiveness -->
+        </body>
+
+        </html>
