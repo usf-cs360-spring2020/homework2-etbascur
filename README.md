@@ -1,12 +1,10 @@
 # README
 
-<https://usf-cs360-spring2020.github.io/template-bulma/>
+<https://usf-cs360-spring2020.github.io/homework2-etbascur/>
 
-![Profile Image](profile.png)
+![headshotResized.jpg](headshotResized.jpg)
 
-**Name:** Your Name  
-**Email:** <username@dons.usfca.edu>
-
-This is a template website using [Bulma](https://bulma.io/), [FontAwesome](https://origin.fontawesome.com/) for icons, and [Github Pages](). Designed to be modified (including this README file).
+**Name:** Enrique Bascur  
+**Email:** <ebascur@dons.usfca.edu>
 
 *Template based on: <https://github.com/usf-cs360-spring2020/template-bulma>*

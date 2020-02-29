@@ -31,7 +31,7 @@ svg.append("text").attr("x", 870).attr("y", 160).text("NY").style("font-size", "
 svg.append("text").attr("x", 870).attr("y", 190).text("TX").style("font-size", "15px").attr("alignment-baseline","middle")
 
 
-  // Extract the list of dimensions we want to keep in the plot. Here I keep all except the column called Species
+  // Extract the list of dimensions we want to keep in the plot.
   dimensions = ["kq5_cond_parq1", "tier", "k_median"];
   // Color scale: colored by state to match
   let color = d3.scaleOrdinal()
